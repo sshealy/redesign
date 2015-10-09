@@ -1,5 +1,5 @@
 /**
- * @file
+ * @file 
  * Styles are organized using the SMACSS technique. @see http://smacss.com/book/
  *
  * When you turn on CSS aggregation at admin/config/development/performance, all
@@ -21,29 +21,48 @@
 // Optionally, add your own components here.
 @import "print";
 
+/* SMACSS theme rules */
+/* @import "theme-A"; */
+/* @import "theme-B"; */
 
-body {
-  background: #000;
-  color: #fff;
-  width:960px;
+a {
+	text-decoration: none;
+	color:#0084CB;
 }
 
-/* Footer styles */
+/*FOOTER STYLES */
 
-.frontpageMenuAreaDiv {
-	position:absolute;
-	/*top:-20px; */
-	left:0px;
-	height:30px;
-	z-index: 3;
-	clear:both;
-	/*
-	COMMENTED OUT FOR SURVEY 3/25/14
-	z-index: 10;*/
-	}
+#footer {
+	background-color: #E2E1E9;
+}
+
+#footer div{
+	display: inline-block;
+	padding:0.5em;
+	vertical-align: top;
+	color:#808080;
+
+}
+
+#footer .socialmedia p {
+	margin:0;
+	padding:0.5em;
+}
+
+#footer .socialmedia a {
+	padding-right:0.75em;
+}
+
+#footer .socialmedia .icons a {
+	padding-right:0.25em;
+}
+
+.socialmedia {
+	position: relative;
+    }
 
 .newsbutton {
-	@include font;
+	@include regularfont;
 	background-color: #0084CB;
 	text-decoration: none;
 	color: #fff;
@@ -68,7 +87,8 @@ body {
      padding-right: 3px;
 }
 
+.logo {
+	height:100px;
+	padding-left: 2em;
+}
 
-/* SMACSS theme rules */
-/* @import "theme-A"; */
-/* @import "theme-B"; */

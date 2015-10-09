@@ -36,8 +36,9 @@
   }
 }
 
-@mixin font {
-  $lato;
-  font-size:12px;
+//Custom Mixins
+@mixin regularfont {
+  font-family: $base-font-family;
+  font-size: 12px;
   font-weight: normal;
 }
