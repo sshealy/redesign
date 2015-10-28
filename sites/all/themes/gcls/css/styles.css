@@ -1701,7 +1701,7 @@ tr.selected td {
 /* line 803, ../sass/components/_misc.scss */
 .progress .filled {
   background-color: #0072b9;
-  background-image: url('../images/progress.gif?1444157643');
+  background-image: url('../images/progress.gif?1445957862');
 }
 
 /**
@@ -1868,6 +1868,7 @@ a {
 
 /* line 90, ../sass/styles.scss */
 .logo {
-  height: 100px;
-  padding-left: 2em;
+  height: 75px;
+  padding-left: 1em;
+  padding-top: 0.5em;
 }
