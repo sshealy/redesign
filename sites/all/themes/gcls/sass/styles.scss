@@ -30,13 +30,13 @@ a {
 	color:#0084CB;
 }
 
-/*FOOTER STYLES */
+/*FOOTER AND HEADER STYLES */
 
-#footer {
+#footer, #header {
 	background-color: #E2E1E9;
 }
 
-#footer div{
+#footer div, #header div{
 	display: inline-block;
 	padding:0.5em;
 	vertical-align: top;
@@ -44,16 +44,16 @@ a {
 
 }
 
-#footer .socialmedia p {
+#footer .socialmedia p, #header .socialmedia p {
 	margin:0;
 	padding:0.5em;
 }
 
-#footer .socialmedia a {
+#footer .socialmedia a, #header .socialmedia a {
 	padding-right:0.75em;
 }
 
-#footer .socialmedia .icons a {
+#footer .socialmedia .icons a, #header .socialmedia .icons a {
 	padding-right:0.25em;
 }
 

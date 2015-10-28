@@ -1799,14 +1799,14 @@ a {
   color: #0084CB;
 }
 
-/*FOOTER STYLES */
+/*FOOTER AND HEADER STYLES */
 /* line 35, ../sass/styles.scss */
-#footer {
+#footer, #header {
   background-color: #E2E1E9;
 }
 
 /* line 39, ../sass/styles.scss */
-#footer div {
+#footer div, #header div {
   display: inline-block;
   padding: 0.5em;
   vertical-align: top;
@@ -1814,18 +1814,18 @@ a {
 }
 
 /* line 47, ../sass/styles.scss */
-#footer .socialmedia p {
+#footer .socialmedia p, #header .socialmedia p {
   margin: 0;
   padding: 0.5em;
 }
 
 /* line 52, ../sass/styles.scss */
-#footer .socialmedia a {
+#footer .socialmedia a, #header .socialmedia a {
   padding-right: 0.75em;
 }
 
 /* line 56, ../sass/styles.scss */
-#footer .socialmedia .icons a {
+#footer .socialmedia .icons a, #header .socialmedia .icons a {
   padding-right: 0.25em;
 }
 
