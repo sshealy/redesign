@@ -10,7 +10,7 @@
 <header id="header" class="<?php print $classes; ?>">
 
   <div >
-  	<img class="logo" src="http://localhost/redesign/sites/all/themes/gcls/images/Logo2016.png">
+  	<a href="#"><img class="logo" src="sites/all/themes/gcls/images/Logo2016.png"></a>
   </div>
 
   <?php print render($page['header']); ?>

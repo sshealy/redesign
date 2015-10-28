@@ -10,7 +10,7 @@
 <footer id="footer" class="<?php print $classes; ?>">
 
   <div >
-  	<img class="logo" src="http://localhost/redesign/sites/all/themes/gcls/images/Logo2016.png">
+  	<img class="logo" src="sites/all/themes/gcls/images/Logo2016.png">
   </div>
 
   <div>
