@@ -27,12 +27,12 @@
       <a href="http://www.greenvillelibrary.org/index.php/about/contact-us"> Contact Us</a>
       <a href="#"> About Us</a>
   	</p>
-  	<div class="icons">
-		<a alt="Facebook" href="http://www.facebook.com/greenvillelibrary" target="_blank"><img src="sites/all/themes/gcls/images/face.png"></a>
-		<a alt="Twitter" href="http://twitter.com/GCLSLibrary" target="_blank"><img src="sites/all/themes/gcls/images/twit.png"></a>
-		<a alt="YouTube" href="http://www.youtube.com/user/GreenvilleLibrary" target="_blank"><img src="sites/all/themes/gcls/images/yout.png"></a>
-		<a alt="Pinterest" href="http://pinterest.com/gcls/" target="_blank"><img src="sites/all/themes/gcls/images/pin.png"></a>
-		<a alt="Instagram" href="http://instagram.com/greenvillelibrary" target="_blank"><img src="sites/all/themes/gcls/images/insta.png"></a>
+  <div class="icons">
+		<a href="http://www.facebook.com/greenvillelibrary" target="_blank"><img alt="Facebook" src="sites/all/themes/gcls/images/face.png"></a>
+		<a href="http://twitter.com/GCLSLibrary" target="_blank"><img alt="Twitter" src="sites/all/themes/gcls/images/twit.png"></a>
+		<a href="http://www.youtube.com/user/GreenvilleLibrary" target="_blank"><img alt="YouTube" src="sites/all/themes/gcls/images/yout.png"></a>
+		<a href="http://pinterest.com/gcls/" target="_blank"><img alt="Pinterest" src="sites/all/themes/gcls/images/pin.png"></a>
+		<a href="http://instagram.com/greenvillelibrary" target="_blank"><img alt="Instagram" src="sites/all/themes/gcls/images/insta.png"></a>
 	</div>
 
 	<div class="nlink">
