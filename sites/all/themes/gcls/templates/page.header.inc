@@ -9,11 +9,16 @@
 ?>
 <header id="header" class="<?php print $classes; ?>">
 
+  <?php print render($page['header']); ?>
+
   <div >
   	<a href="#"><img class="logo" src="sites/all/themes/gcls/images/Logo2016.png"></a>
   </div>
 
-  <?php print render($page['header']); ?>
+  <!-- <div class="catlinks">
+    <a  href="https://encore.greenvillelibrary.org/iii/encore/myaccount"><button class="myaccount">My Account</button></a>
+    <a  href="https://encore.greenvillelibrary.org"><button class="catsearch">Catalog</button></a>
+  </div> -->
 
   <div class="socialmedia">
   	<p>

@@ -28,6 +28,7 @@
  * HTML5 display definitions
  */
 /* Correct `block` display not defined in IE 8/9. */
+@import url(https://fonts.googleapis.com/css?family=Lato:400,700);
 /* line 33, ../sass/_normalize.scss */
 article,
 aside,
@@ -1793,19 +1794,46 @@ tr.selected td {
 /* SMACSS theme rules */
 /* @import "theme-A"; */
 /* @import "theme-B"; */
-/* line 28, ../sass/styles.scss */
+/* line 30, ../sass/styles.scss */
 a {
   text-decoration: none;
   color: #0084CB;
 }
 
-/*FOOTER AND HEADER STYLES */
 /* line 35, ../sass/styles.scss */
+p {
+  font-size: 1em;
+  color: #58595B;
+}
+
+/* line 40, ../sass/styles.scss */
+body {
+  font-family: "Lato", Georgia, sans-serif;
+}
+
+/* SECTION HEADER STYLES*/
+/* line 45, ../sass/styles.scss */
+h1 {
+  font-size: 2.25em;
+}
+
+/* line 49, ../sass/styles.scss */
+h2 {
+  font-size: 1.75em;
+}
+
+/* line 53, ../sass/styles.scss */
+h3 {
+  font-size: 1.33em;
+}
+
+/*FOOTER AND HEADER STYLES */
+/* line 58, ../sass/styles.scss */
 #footer, #header {
   background-color: #E2E1E9;
 }
 
-/* line 39, ../sass/styles.scss */
+/* line 62, ../sass/styles.scss */
 #footer div, #header div {
   display: inline-block;
   padding: 0.5em;
@@ -1813,62 +1841,85 @@ a {
   color: #808080;
 }
 
-/* line 47, ../sass/styles.scss */
+/* line 70, ../sass/styles.scss */
+#header .socialmedia {
+  float: right;
+}
+
+/* line 74, ../sass/styles.scss */
 #footer .socialmedia p, #header .socialmedia p {
   margin: 0;
   padding: 0.5em;
 }
 
-/* line 52, ../sass/styles.scss */
+/* line 79, ../sass/styles.scss */
 #footer .socialmedia a, #header .socialmedia a {
   padding-right: 0.75em;
 }
 
-/* line 56, ../sass/styles.scss */
+/* line 83, ../sass/styles.scss */
 #footer .socialmedia .icons a, #header .socialmedia .icons a {
   padding-right: 0.25em;
 }
 
-/* line 60, ../sass/styles.scss */
+/* line 87, ../sass/styles.scss */
 .socialmedia {
   position: relative;
 }
 
-/* line 64, ../sass/styles.scss */
+/* line 91, ../sass/styles.scss */
 .newsbutton {
   font-family: "Lato", Georgia, sans-serif;
-  font-size: 12px;
+  font-weight: normal;
+  font-family: "Lato", Georgia, sans-serif;
   font-weight: normal;
   background-color: #0084CB;
   text-decoration: none;
   color: #fff;
   border: none;
+  cursor: pointer;
   width: 150px;
   height: 28px;
-  cursor: pointer;
 }
 
-/* line 75, ../sass/styles.scss */
+/* line 98, ../sass/styles.scss */
 .nlink {
   display: inline-block;
   vertical-align: top;
 }
 
-/* line 80, ../sass/styles.scss */
+/* line 103, ../sass/styles.scss */
 .icons {
   display: inline-block;
   height: 28px;
   padding-right: 10px;
 }
 
-/* line 86, ../sass/styles.scss */
+/* line 109, ../sass/styles.scss */
 .icons a {
   padding-right: 3px;
 }
 
-/* line 90, ../sass/styles.scss */
+/* line 113, ../sass/styles.scss */
 .logo {
   height: 75px;
   padding-left: 1em;
   padding-top: 0.5em;
+}
+
+/* line 119, ../sass/styles.scss */
+#header .catlinks {
+  padding-left: 8em;
+  padding-top: 2.5em;
+}
+
+/* line 124, ../sass/styles.scss */
+.myaccount, .catsearch {
+  font-family: "Lato", Georgia, sans-serif;
+  font-weight: normal;
+  background-color: #0084CB;
+  text-decoration: none;
+  color: #fff;
+  border: none;
+  cursor: pointer;
 }

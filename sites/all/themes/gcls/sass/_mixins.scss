@@ -39,6 +39,14 @@
 //Custom Mixins
 @mixin regularfont {
   font-family: $base-font-family;
-  font-size: 12px;
   font-weight: normal;
+}
+
+@mixin gclsbutton {
+  @include regularfont;
+  background-color: #0084CB;
+  text-decoration: none;
+  color: #fff;
+  border:none;
+  cursor: pointer;
 }

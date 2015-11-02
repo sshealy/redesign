@@ -25,11 +25,34 @@
 /* @import "theme-A"; */
 /* @import "theme-B"; */
 
+@import url(https://fonts.googleapis.com/css?family=Lato:400,700);
+
 a {
 	text-decoration: none;
 	color:#0084CB;
 }
 
+p {
+	font-size:1em;
+	color:#58595B;
+}
+
+body {
+	font-family:$lato;
+}
+
+/* SECTION HEADER STYLES*/
+h1 {
+	font-size: 2.25em;
+}
+
+h2 {
+	font-size: 1.75em;
+}
+
+h3 {
+	font-size:1.33em;
+}
 /*FOOTER AND HEADER STYLES */
 
 #footer, #header {
@@ -42,6 +65,10 @@ a {
 	vertical-align: top;
 	color:#808080;
 
+}
+
+#header .socialmedia {
+	float:right;
 }
 
 #footer .socialmedia p, #header .socialmedia p {
@@ -63,13 +90,9 @@ a {
 
 .newsbutton {
 	@include regularfont;
-	background-color: #0084CB;
-	text-decoration: none;
-	color: #fff;
-	border:none;
+	@include gclsbutton;
 	width:150px;
 	height: 28px;
-	cursor: pointer;
 	}
 
 .nlink {
@@ -91,5 +114,15 @@ a {
 	height:75px;
 	padding-left: 1em;
 	padding-top: 0.5em;
+}
+
+#header .catlinks {
+	padding-left:8em;
+	padding-top:2.5em;
+}
+
+.myaccount, .catsearch {
+	@include gclsbutton;
+	  
 }
 
