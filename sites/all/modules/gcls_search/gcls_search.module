@@ -101,19 +101,19 @@ function search_help($path, $arg) {
  */
 function search_theme() {
   return array(
-    'search_block_form' => array(
+    'gcls_search_block_form' => array(
       'render element' => 'form',
-      'template' => 'search-block-form',
+      'template' => 'gcls_search-block-form',
     ),
-    'search_result' => array(
+    'gcls_search_result' => array(
       'variables' => array('result' => NULL, 'module' => NULL),
-      'file' => 'search.pages.inc',
-      'template' => 'search-result',
+      'file' => 'gcls_search.pages.inc',
+      'template' => 'gcls_search-result',
     ),
-    'search_results' => array(
+    'gcls_search_results' => array(
       'variables' => array('results' => NULL, 'module' => NULL),
-      'file' => 'search.pages.inc',
-      'template' => 'search-results',
+      'file' => 'gcls_search.pages.inc',
+      'template' => 'gcls_search-results',
     ),
   );
 }
@@ -151,7 +151,7 @@ function search_block_info() {
  */
 function search_block_view($delta = '') {
   if (user_access('search content')) {
-    $block['content'] = drupal_get_form('search_block_form');
+    $block['content'] = drupal_get_form('gcls_search_block_form');
     return $block;
   }
 }
@@ -165,16 +165,16 @@ function search_menu() {
     'page callback' => 'search_view',
     'access callback' => 'search_is_active',
     'type' => MENU_SUGGESTED_ITEM,
-    'file' => 'search.pages.inc',
+    'file' => 'gcls_search.pages.inc',
   );
   $items['admin/config/search/settings'] = array(
     'title' => 'Search settings',
     'description' => 'Configure relevance settings for search and other indexing options.',
     'page callback' => 'drupal_get_form',
-    'page arguments' => array('search_admin_settings'),
+    'page arguments' => array('gcls_search_admin_settings'),
     'access arguments' => array('administer search'),
     'weight' => -10,
-    'file' => 'search.admin.inc',
+    'file' => 'gcls_search.admin.inc',
   );
   $items['admin/config/search/settings/reindex'] = array(
     'title' => 'Clear index',
@@ -182,7 +182,7 @@ function search_menu() {
     'page arguments' => array('search_reindex_confirm'),
     'access arguments' => array('administer search'),
     'type' => MENU_VISIBLE_IN_BREADCRUMB,
-    'file' => 'search.admin.inc',
+    'file' => 'gcls_search.admin.inc',
   );
 
   // Add paths for searching. We add each module search path twice: once without
@@ -204,7 +204,7 @@ function search_menu() {
         'access callback' => '_search_menu_access',
         'access arguments' => array($module),
         'type' => MENU_LOCAL_TASK,
-        'file' => 'search.pages.inc',
+        'file' => 'gcls_search.pages.inc',
         'weight' => $module == $default_info['module'] ? -10 : 0,
       );
       $items["$path/%menu_tail"] = array(
@@ -217,7 +217,7 @@ function search_menu() {
         // The default local task points to its parent, but this item points to
         // where it should so it should not be changed.
         'type' => MENU_LOCAL_TASK,
-        'file' => 'search.pages.inc',
+        'file' => 'gcls_search.pages.inc',
         'weight' => 0,
         // These tabs are not subtabs.
         'tab_root' => 'search/' . $default_info['path'] . '/%',

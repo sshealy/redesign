@@ -3,13 +3,12 @@ description = Enables site-wide keyword searching.
 package = "gcls_search"
 version = 1
 core = 7.x
-files[] = search.extender.inc
-files[] = search.test
-configure = admin/config/search/settings
-stylesheets[all][] = search.css
+files[] = gcls_search.extender.inc
+files[] = gcls_search.test
+configure = admin/config/gcls_search/settings
+stylesheets[all][] = gcls_search.css
 
 ; Information added by Drupal.org packaging script on 2015-10-21
 version = "7.41"
 project = "drupal"
 datestamp = "1445457729"
-

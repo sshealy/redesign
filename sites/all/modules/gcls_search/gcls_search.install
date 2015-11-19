@@ -8,17 +8,17 @@
 /**
  * Implements hook_uninstall().
  */
-function search_uninstall() {
+function gcls_search_uninstall() {
   variable_del('minimum_word_size');
   variable_del('overlap_cjk');
-  variable_del('search_cron_limit');
+  variable_del('gcls_search_cron_limit');
 }
 
 /**
  * Implements hook_schema().
  */
-function search_schema() {
-  $schema['search_dataset'] = array(
+function gcls_search_schema() {
+  $schema['gcls_search_dataset'] = array(
     'description' => 'Stores items that will be searched.',
     'fields' => array(
       'sid' => array(
@@ -51,7 +51,7 @@ function search_schema() {
     'primary key' => array('sid', 'type'),
   );
 
-  $schema['search_index'] = array(
+  $schema['gcls_search_index'] = array(
     'description' => 'Stores the search index, associating words, items and scores.',
     'fields' => array(
       'word' => array(
@@ -85,7 +85,7 @@ function search_schema() {
     ),
     'foreign keys' => array(
       'search_dataset' => array(
-        'table' => 'search_dataset',
+        'table' => 'gcls_search_dataset',
         'columns' => array(
           'sid' => 'sid',
           'type' => 'type',
@@ -95,7 +95,7 @@ function search_schema() {
     'primary key' => array('word', 'sid', 'type'),
   );
 
-  $schema['search_total'] = array(
+  $schema['gcls_search_total'] = array(
     'description' => 'Stores search totals for words.',
     'fields' => array(
       'word' => array(
@@ -114,7 +114,7 @@ function search_schema() {
     'primary key' => array('word'),
   );
 
-  $schema['search_node_links'] = array(
+  $schema['gcls_search_node_links'] = array(
     'description' => 'Stores items (like nodes) that link to other nodes, used to improve search scores for nodes that are frequently linked to.',
     'fields' => array(
       'sid' => array(
@@ -157,26 +157,26 @@ function search_schema() {
 /**
  * Replace unique keys in 'search_dataset' and 'search_index' by primary keys.
  */
-function search_update_7000() {
-  db_drop_unique_key('search_dataset', 'sid_type');
+function gcls_search_update_7000() {
+  db_drop_unique_key('gcls_search_dataset', 'sid_type');
   $dataset_type_spec = array(
     'type' => 'varchar',
     'length' => 16,
     'not null' => TRUE,
     'description' => 'Type of item, e.g. node.',
   );
-  db_change_field('search_dataset', 'type', 'type', $dataset_type_spec);
-  db_add_primary_key('search_dataset', array('sid', 'type'));
+  db_change_field('gcls_search_dataset', 'type', 'type', $dataset_type_spec);
+  db_add_primary_key('gcls_search_dataset', array('sid', 'type'));
 
-  db_drop_index('search_index', 'word');
-  db_drop_unique_key('search_index', 'word_sid_type');
+  db_drop_index('gcls_search_index', 'word');
+  db_drop_unique_key('gcls_search_index', 'word_sid_type');
   $index_type_spec = array(
     'type' => 'varchar',
     'length' => 16,
     'not null' => TRUE,
     'description' => 'The {search_dataset}.type of the searchable item to which the word belongs.',
   );
-  db_change_field('search_index', 'type', 'type', $index_type_spec);
-  db_add_primary_key('search_index', array('word', 'sid', 'type'));
+  db_change_field('gcls_search_index', 'type', 'type', $index_type_spec);
+  db_add_primary_key('gcls_search_index', array('word', 'sid', 'type'));
 }
 
