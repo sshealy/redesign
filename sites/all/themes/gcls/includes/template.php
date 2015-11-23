@@ -130,3 +130,30 @@ function STARTERKIT_preprocess_block(&$variables, $hook) {
   //}
 }
 // */
+<<<<<<< HEAD:sites/all/themes/gcls/template.php
+=======
+
+
+/**
+* hook_form_FORM_ID_alter
+*/
+function gcls_form_search_block_form_alter(&$form, &$form_state, $form_id) {
+    $form['gcls_search_block_form']['#title'] = t('Search'); // Change the text on the label element
+    $form['gcls_search_block_form']['#title_display'] = 'invisible'; // Toggle label visibilty
+    $form['gcls_search_block_form']['#size'] = 40;  // define size of the textfield
+    $form['gcls_search_block_form']['#default_value'] = t('Search'); // Set a default value for the textfield
+    $form['actions']['submit']['#value'] = t('GO!'); // Change the text on the submit button
+    $form['actions']['submit'] = array('#type' => 'image_button', '#src' => base_path() . path_to_theme() . '/images/search-button.png');
+
+    // Add extra attributes to the text box
+    $form['gcls_search_block_form']['#attributes']['onblur'] = "if (this.value == '') {this.value = 'Search';}";
+    $form['gcls_search_block_form']['#attributes']['onfocus'] = "if (this.value == 'Search') {this.value = '';}";
+    // Prevent user from searching the default text
+    $form['#attributes']['onsubmit'] = "if(this.search_block_form.value=='Search'){ alert('Please enter a search'); return false; }";
+
+    // Alternative (HTML5) placeholder attribute instead of using the javascript
+    $form['gcls_search_block_form']['#attributes']['placeholder'] = t('Search');
+} 
+?>
+
+>>>>>>> 2537ce7b73cdab8820bd1268881efbe5951eb8d7:sites/all/themes/gcls/includes/template.php
